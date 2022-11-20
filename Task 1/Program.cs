@@ -3,7 +3,20 @@
 // 782 -> 8
 // 918 -> 1
 
-Console.Write("Введи трёхзначное число: ");
-int threeDigitNumber = Convert.ToInt32(Console.ReadLine());
-string stringNumber = Convert.ToString(threeDigitNumber);
-Console.WriteLine("Вторая цифра этого числа = "+stringNumber[1]);
+int number = ReadInt("Введите трехзначное число: ");
+int result = number % 100;
+if(number>99 && number<1000)
+{
+    result=result/10;
+    Console.WriteLine("Вторая цифра введенного числа " + result);
+}
+else 
+{
+    Console.WriteLine("Ошибка! Введите трехзначное число!");
+}
+
+int ReadInt(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
