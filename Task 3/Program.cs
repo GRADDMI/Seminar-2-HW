@@ -9,12 +9,12 @@ int dayNumber = Convert.ToInt32(Console.ReadLine());
 
 void CheckingTheDayOfTheWeek (int dayNumber) {
   if (dayNumber == 6 || dayNumber == 7) {
-  Console.WriteLine("(Этот день выходной) -> Да");
+  Console.WriteLine("Этот день недели является выходным ");
   }
   else if (dayNumber < 1 || dayNumber > 7) {
     Console.WriteLine("В одной неделе 7 дней");
   }
-  else Console.WriteLine("(Этот день не выходной) -> Нет");
+  else Console.WriteLine("Этот день недели не является выходным");
 }
 
 CheckingTheDayOfTheWeek(dayNumber);
